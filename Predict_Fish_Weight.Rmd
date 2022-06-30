@@ -23,6 +23,7 @@ require(leaps)
 All_Fish <- read.csv(file = "Fish.csv")
 ```
 
+
 ```{r}
 Perch <- filter(All_Fish, Species=="Perch")
 ```
@@ -59,11 +60,36 @@ the best two regression models height and width.
 
 ## Pike
 
+```{r}
+Pike <- filter(All_Fish, Species=="Pike")
+```
+
+```{r}
+Pike <- select(Pike, -Species)
+```
+
+
+```{r}
+regsubsets.out <-
+    regsubsets(Weight ~ .,
+               data = Pike,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
 
 
 ### Best Models
+The best models are lenght1, lenght2, lenght3, height, width, because its has the highest adjustedRsquare, adjusted square is on 0.9880, its bigger and higher then everyone else.
 
 ### Best Two regressor model
+The best two regressor model are length1 and length3, after adjusted R square tested out all these levels, it gave us these two best.
 
 ## Roach
 
