@@ -18,7 +18,22 @@ require(tigerstats)
 require(tidyverse)
 ```
 
+```{r}
+All_Fish <- read.csv(file = "Fish.csv")
+```
+
+```{r}
+Perch <- filter(All_Fish, Species=="Perch")
+```
+
+```{r}
+Perch <- select(Perch, -Species)
+```
+
+
+
 # Predicting Fish Weight
+
 
 
 ## Perch
