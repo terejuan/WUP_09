@@ -52,11 +52,10 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 ```
 
 ### Best Models
-
 best model for Perch is height and width
-### Best 
 
-the best two regression models height and width.
+### Best Two regressor model 
+The best two regressor model that adjustedRsquare gave us is height and width. Landing on subset size on 2 and on Y linear 0.9400
 
 ## Pike
 
@@ -93,8 +92,34 @@ The best two regressor model are length1 and length3, after adjusted R square te
 
 ## Roach
 
+
+```{r}
+Roach <- filter(All_Fish, Species=="Roach")
+```
+
+```{r}
+Roach <- select(Roach, -Species)
+```
+
+```{r}
+regsubsets.out <-
+    regsubsets(Weight ~ .,
+               data = Roach,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
+
 ### Best Models
+The best  models that adjustedRsuqare gave us is length3, and width. looking at the date L3 and lenght is on the topof all the other models with being at almost 0.850
 
 ### Best Two regressor model
+
 
 ## Final Summary Statements
