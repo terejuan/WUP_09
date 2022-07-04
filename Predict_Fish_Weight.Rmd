@@ -118,11 +118,12 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 
 ### Best Models
 
-The best  models that adjustedRsuqare gave us is length3, and width. looking at the date L3 and lenght is on the topof all the other models with being at almost 0.850
+The best  models that AdjustedR^2 gave us is length3, and width. looking at the date L3 and lenght is on the topof all the other models with being at almost 0.850
 
 ### Best Two regressor model
 
-The best two regressor models that adjuster R square trew us is lenght3 and width. being that it landed on subset size is on 2 and adjusted R square is on 0.850.
+The best two regressor models that AdjustedR^2 threw us is lenght3 and width. being that it landed on subset size is on 2 and adjusted R square is on 0.850.
 
 ## Final Summary Statements
 
+In conclusion to figure out the best regression model to predict the weight of the 3 types of fish Perch, pike, and Roach, we used the multiple regression data.In order for us to obtain the results for each individual fish we had to pull them aside from all fishes. First we filled them in to their group to get the variable witch is 6 and then we selected them from the group to obtain the numerical data. Once we had that we ran the multiple regression where AdjustedR^2 gave us the best model, and the best two models for each individual fish. When AdjustedR^2 is running the date, it runs them using each level from weight lenght1, length2 length3, height, and width. From that it chooses which Scores the highest and giving us our model, the higher the better it is. Fore Perch height and weight scored highest,From the best two models subset size set on 2, AdjustedR^2 gave us 0.9400.Fore Pike we got the best model that landed the hightest is L1-L2-L3-H-W.And the best two models 2 subset sise set on 2 gave us  L-1-L-3 and adjustedR^2 on 0.965. For Roach the best model is L3-W, And the two best model is  L3-W subset size set on 2 and AdjustedR^2 on .850.
