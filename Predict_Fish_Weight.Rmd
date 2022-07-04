@@ -117,9 +117,12 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 ```
 
 ### Best Models
+
 The best  models that adjustedRsuqare gave us is length3, and width. looking at the date L3 and lenght is on the topof all the other models with being at almost 0.850
 
 ### Best Two regressor model
 
+The best two regressor models that adjuster R square trew us is lenght3 and width. being that it landed on subset size is on 2 and adjusted R square is on 0.850.
 
 ## Final Summary Statements
+
